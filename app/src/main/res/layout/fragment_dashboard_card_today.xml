@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_today"
+    android:layout_marginBottom="@dimen/common_margin_padding_medium">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_today"
+            android:padding="@dimen/common_margin_padding_medium"
+            style="@style/TextViewCardTitleStyle"/>
+        <include layout="@layout/divider" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/common_margin_padding_medium"
+                android:id="@+id/table_today">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/common_margin_padding_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:text="@string/label_class"
+
+                        style="@style/TextViewLabelStyle"
+                        android:gravity="center_horizontal"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:text="@string/label_time"
+
+                        style="@style/TextViewLabelStyle"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:text="@string/label_where"
+
+                        style="@style/TextViewLabelStyle"
+                        android:gravity="center_horizontal" />
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:text="@string/no_class_today"
+                android:id="@+id/text_no_class" />
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
